@@ -1,0 +1,17 @@
+{
+  "tables": ["molecule", "atom", "group", "gmember", "bond"],
+  "primary_keys": {
+    "molecule": "molecule_id",
+    "atom": "atom_id",
+    "group": "group_id",
+    "gmember": "gmember_id",
+    "bond": "bond_id"
+  },
+  "foreign_keys": [
+    ["atom", "molecule_id", "molecule", "molecule_id"],
+    ["gmember", "atom_id", "atom", "atom_id"],
+    ["gmember", "group_id", "group", "group_id"],
+    ["bond", "atom_id", "atom", "atom_id"],
+    ["bond", "atom_id2", "atom", "atom_id"]
+  ]
+}

@@ -1,0 +1,32 @@
+name: frog-relbench
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10.10
+  - pip>=24
+  - pip:
+      # PyG CPU wheels matched to the PyTorch version below.
+      - --find-links https://data.pyg.org/whl/torch-2.5.1+cpu.html
+      - numpy
+      - pandas
+      - scipy
+      - scikit-learn<=1.6.1
+      - pyarrow
+      - duckdb
+      - datasets
+      - pooch
+      - typing-extensions
+      - tqdm
+      - networkx
+      - sentence-transformers
+      - torch==2.5.1
+      - torchvision==0.20.1
+      - torchaudio==2.5.1
+      - torch-geometric
+      - pyg-lib
+      - torch-scatter
+      - torch-sparse
+      - torch-cluster
+      - torch-spline-conv
+      - pytorch_frame>=0.2.3
+      - -e ./Relbench/relbench-main

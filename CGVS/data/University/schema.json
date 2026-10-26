@@ -1,0 +1,23 @@
+{
+  "tables": [
+    "RA",
+    "registration",
+    "prof",
+    "student",
+    "course"
+  ],
+  "primary_keys": {
+    "RA": "ra_id",
+    "registration": "registration_id",
+    "prof": "prof_id",
+    "student": "student_id",
+    "course": "course_id"
+  },
+  "foreign_keys": [
+    ["RA", "prof_id", "prof", "prof_id"],
+    ["RA", "student_id", "student", "student_id"],
+
+    ["registration", "student_id", "student", "student_id"],
+    ["registration", "course_id", "course", "course_id"]
+  ]
+}
